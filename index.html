@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Oficial - Irmo Neto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Oficial - Irmo Neto (AdSense Ready)</title>
 
-  <!-- 🔹 Código principal do Google AdSense -->
-  <script async 
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
-    crossorigin="anonymous"></script>
+    <!-- Configuração do Tailwind CSS para estilo responsivo e moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para o corpo */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para simular o espaço do anúncio (cor verde para destaque) */
+        .ads-placeholder {
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #22c55e; /* Borda verde */
+            color: #16a34a; /* Texto verde escuro */
+            background-color: #f0fdf4; /* Fundo verde claro */
+            border-radius: 0.75rem;
+            width: 100%;
+            max-width: 728px; 
+            margin: 2rem auto;
+        }
+    </style>
 
-  <!-- 🔹 Fonte e estilo básico -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-      min-height: 100vh;
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #1f2937;
-    }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #2563eb;
-      color: white;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    a:hover { background: #1e40af; }
-  </style>
+    <!-- 🔹 CÓDIGO DO ADSENSE PARA AUTO ADS (Corretamente no <head>) -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
+        crossorigin="anonymous"></script>
+
 </head>
-<body>
-  <h1>Bem-vindo à Página Oficial de Irmo Neto</h1>
-  <p>Escolha um dos meus aplicativos abaixo:</p>
+<body class="bg-blue-50 min-h-screen flex flex-col items-center p-6 text-gray-800">
+    
+    <div class="max-w-4xl w-full p-8 bg-white shadow-xl rounded-2xl text-center">
+        <!-- Título principal -->
+        <h1 class="text-4xl font-extrabold text-blue-700 mb-4">Olá!!! - Você está na Página Oficial de Irmo Zuccato Neto</h1>
+        
+        <!-- Texto de descrição atualizado -->
+        <p class="text-lg mb-6 text-gray-600">
+            Escolha um dos meus aplicativos ou infoprodutos abaixo para explorar.
+        </p>
 
-  <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" target="_blank">
-    🔍 Analisador da Personalidade pelos Pés
-  </a>
+        <!--
+        ******************************************************************
+        1. ANÚNCIO MANUAL DE DISPLAY (RECOMENDADO PARA PÁGINAS SIMPLES)
+        ******************************************************************
+        - Use este bloco para colocar um anúncio manual.
+        - Substitua 'YOUR_SLOT_ID' pelo ID de slot criado no painel do AdSense.
+        - A div 'ads-placeholder' será ocultada quando o AdSense carregar.
+        -->
+        <div class="my-8 flex justify-center w-full">
+             <div class="ads-placeholder">
+                <p class="font-bold text-lg">ÁREA PARA ANÚNCIO MANUAL DE DISPLAY (Substitua este div)</p>
+            </div>
+            
+            <ins class="adsbygoogle hidden"
+                style="display:block; text-align:center;"
+                data-ad-client="ca-pub-2957847231347233"
+                data-ad-slot="YOUR_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                // Lógica para carregar o AdSense no ambiente real e mostrar placeholder na visualização
+                if (typeof adsbygoogle !== 'undefined' && window.location.host !== 'localhost' && window.location.host !== '127.0.0.1') {
+                    document.querySelector('.ads-placeholder').style.display = 'none';
+                    document.querySelector('.adsbygoogle').classList.remove('hidden');
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } else {
+                    document.querySelector('.adsbygoogle').style.display = 'none';
+                }
+            </script>
+        </div>
+        <!-- Fim do Anúncio Manual -->
 
-  <a href="https://irmoneto.github.io/IRMONETO/" target="_blank">
-    📘 Conheça mais sobre meus estudos
-  </a>
+        <!-- Links -->
+        <div class="flex flex-col space-y-4 items-center mt-8">
+            <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" target="_blank"
+               class="w-full max-w-sm bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
+                🔍 Analisador da Personalidade pelos Pés
+            </a>
 
-  <a href="https://github.com/irmoneto" target="_blank">
-    💡 Meu GitHub
-  </a>
+            <!-- Texto do botão atualizado para 'Infoprodutos disponíveis sobre meus estudos' -->
+            <a href="https://irmoneto.github.io/IRMONETO/" target="_blank"
+               class="w-full max-w-sm bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
+                📘 Infoprodutos disponíveis sobre meus estudos
+            </a>
+        </div>
+    </div>
 </body>
 </html>
