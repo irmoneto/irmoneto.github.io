@@ -13,7 +13,7 @@
             font-family: 'Inter', sans-serif;
         }
         /* Estilo para simular o espaço do anúncio (cor verde para destaque) */
-        .ads-placeholder {
+        .ads-placeholder-manual {
             min-height: 150px;
             display: flex;
             align-items: center;
@@ -25,10 +25,13 @@
             width: 100%;
             max-width: 728px; 
             margin: 2rem auto;
+            /* Garante que o placeholder seja escondido quando o AdSense carregar */
+            display: flex;
         }
     </style>
 
-    <!-- 🔹 CÓDIGO DO ADSENSE PARA AUTO ADS (Corretamente no <head>) -->
+    <!-- 🟢 CÓDIGO DO ADSENSE PARA AUTO ADS (Anúncios Automáticos) -->
+    <!-- Este script, por si só, ativa os anúncios automáticos em toda a página. -->
     <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
         crossorigin="anonymous"></script>
@@ -47,49 +50,89 @@
 
         <!--
         ******************************************************************
-        1. ANÚNCIO MANUAL DE DISPLAY (RECOMENDADO PARA PÁGINAS SIMPLES)
+        1. BLOCO DE ANÚNCIO MANUAL DE DISPLAY (OPCIONAL)
         ******************************************************************
-        - Use este bloco para colocar um anúncio manual.
-        - Substitua 'YOUR_SLOT_ID' pelo ID de slot criado no painel do AdSense.
-        - A div 'ads-placeholder' será ocultada quando o AdSense carregar.
+        - Este bloco mantém o placeholder e o script para um anúncio manual específico.
+        - Ele será exibido se você quiser garantir um slot de anúncio em um local fixo,
+          além dos anúncios automáticos (Auto Ads) que já estão ativos.
+        - Não se esqueça de substituir 'YOUR_SLOT_ID' pelo ID real.
         -->
-        <div class="my-8 flex justify-center w-full">
-             <div class="ads-placeholder">
-                <p class="font-bold text-lg">ÁREA PARA ANÚNCIO MANUAL DE DISPLAY (Substitua este div)</p>
+        <div class="my-8 flex flex-col justify-center items-center w-full">
+            <!-- Placeholder visível em ambiente de desenvolvimento/canvas -->
+            <div id="manual-ad-placeholder" class="ads-placeholder-manual">
+                <p class="font-bold text-lg">ÁREA PARA ANÚNCIO MANUAL DE DISPLAY (Substitua 'YOUR_SLOT_ID')</p>
             </div>
             
-            <ins class="adsbygoogle hidden"
-                style="display:block; text-align:center;"
+            <!-- Bloco de anúncio real (Inicialmente escondido) -->
+            <ins id="manual-ad-slot" class="adsbygoogle"
+                style="display:block; text-align:center; width:100%; max-width:728px;"
                 data-ad-client="ca-pub-2957847231347233"
-                data-ad-slot="YOUR_SLOT_ID"
+                data-ad-slot="YOUR_SLOT_ID" 
                 data-ad-format="auto"
                 data-full-width-responsive="true"></ins>
+            
             <script>
                 // Lógica para carregar o AdSense no ambiente real e mostrar placeholder na visualização
+                const placeholder = document.getElementById('manual-ad-placeholder');
+                const adSlot = document.getElementById('manual-ad-slot');
+
+                // Verificamos se o ambiente AdSense está carregado (só ocorre em produção)
                 if (typeof adsbygoogle !== 'undefined' && window.location.host !== 'localhost' && window.location.host !== '127.0.0.1') {
-                    document.querySelector('.ads-placeholder').style.display = 'none';
-                    document.querySelector('.adsbygoogle').classList.remove('hidden');
-                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    // Se o AdSense está carregando, esconde o placeholder e mostra o slot real
+                    if (placeholder) placeholder.style.display = 'none';
+                    if (adSlot) adSlot.style.display = 'block'; 
+                    // Tenta carregar o anúncio manual
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.error("Erro ao carregar o anúncio manual:", e);
+                    }
                 } else {
-                    document.querySelector('.adsbygoogle').style.display = 'none';
+                    // Em ambiente de desenvolvimento, garante que o slot real esteja escondido
+                    if (adSlot) adSlot.style.display = 'none';
+                    // O placeholder já está visível por padrão via CSS.
                 }
             </script>
         </div>
-        <!-- Fim do Anúncio Manual -->
+        <!-- Fim do Bloco de Anúncio Manual -->
+
+        <div class="my-8 ads-placeholder-manual">
+            <p class="font-bold text-base text-center">
+                ÁREA RESERVADA PARA ANÚNCIOS AUTOMÁTICOS DO ADSENSE (Auto Ads)
+            </p>
+        </div>
+
 
         <!-- Links -->
         <div class="flex flex-col space-y-4 items-center mt-8">
             <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" target="_blank"
-               class="w-full max-w-sm bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
+               class="w-full max-w-sm bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
                 🔍 Analisador da Personalidade pelos Pés
             </a>
 
             <!-- LINK do botão de Infoprodutos ATUALIZADO -->
             <a href="https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/" target="_blank"
-               class="w-full max-w-sm bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
+               class="w-full max-w-sm bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
                 📘 Infoprodutos disponíveis sobre meus estudos
             </a>
         </div>
     </div>
+
+    <!-- 
+    ******************************************************************
+    2. ANÚNCIO IN-FEED (EXEMPLO)
+    ******************************************************************
+    - Este é apenas um exemplo de onde o Auto Ads ou um bloco de anúncio In-Feed
+      poderia ser inserido após o conteúdo principal para maximizar a receita.
+    -->
+    <div class="w-full max-w-4xl p-8 mt-12 bg-white shadow-xl rounded-2xl text-center">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Mais para explorar</h2>
+        <p class="text-gray-500 mb-6">Continue rolando para mais conteúdo ou anúncios.</p>
+        
+        <div class="ads-placeholder-manual !min-h-[100px] my-4">
+            <p class="font-bold text-sm">ÁREA RESERVADA PARA ANÚNCIOS IN-FEED OU AUTOMÁTICOS</p>
+        </div>
+    </div>
 </body>
 </html>
+
