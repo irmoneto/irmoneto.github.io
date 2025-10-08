@@ -39,6 +39,7 @@
 </head>
 <body class="bg-blue-50 min-h-screen flex flex-col items-center p-6 text-gray-800">
     
+    <!-- O PRIMEIRO E ÚNICO CONTAINER -->
     <div class="max-w-4xl w-full p-8 bg-white shadow-xl rounded-2xl text-center">
         <!-- Título principal -->
         <h1 class="text-4xl font-extrabold text-blue-700 mb-4">Olá!!! - Você está na Página Oficial de Irmo Zuccato Neto</h1>
@@ -48,54 +49,7 @@
             Escolha um dos meus aplicativos ou infoprodutos abaixo para explorar.
         </p>
 
-        <!--
-        ******************************************************************
-        1. BLOCO DE ANÚNCIO MANUAL DE DISPLAY (OPCIONAL)
-        ******************************************************************
-        - Este bloco mantém o placeholder e o script para um anúncio manual específico.
-        - Ele será exibido se você quiser garantir um slot de anúncio em um local fixo,
-          além dos anúncios automáticos (Auto Ads) que já estão ativos.
-        - Não se esqueça de substituir 'YOUR_SLOT_ID' pelo ID real.
-        -->
-        <div class="my-8 flex flex-col justify-center items-center w-full">
-            <!-- Placeholder visível em ambiente de desenvolvimento/canvas -->
-            <div id="manual-ad-placeholder" class="ads-placeholder-manual">
-                <p class="font-bold text-lg">ÁREA PARA ANÚNCIO MANUAL DE DISPLAY (Substitua 'YOUR_SLOT_ID')</p>
-            </div>
-            
-            <!-- Bloco de anúncio real (Inicialmente escondido) -->
-            <ins id="manual-ad-slot" class="adsbygoogle"
-                style="display:block; text-align:center; width:100%; max-width:728px;"
-                data-ad-client="ca-pub-2957847231347233"
-                data-ad-slot="YOUR_SLOT_ID" 
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            
-            <script>
-                // Lógica para carregar o AdSense no ambiente real e mostrar placeholder na visualização
-                const placeholder = document.getElementById('manual-ad-placeholder');
-                const adSlot = document.getElementById('manual-ad-slot');
-
-                // Verificamos se o ambiente AdSense está carregado (só ocorre em produção)
-                if (typeof adsbygoogle !== 'undefined' && window.location.host !== 'localhost' && window.location.host !== '127.0.0.1') {
-                    // Se o AdSense está carregando, esconde o placeholder e mostra o slot real
-                    if (placeholder) placeholder.style.display = 'none';
-                    if (adSlot) adSlot.style.display = 'block'; 
-                    // Tenta carregar o anúncio manual
-                    try {
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    } catch (e) {
-                        console.error("Erro ao carregar o anúncio manual:", e);
-                    }
-                } else {
-                    // Em ambiente de desenvolvimento, garante que o slot real esteja escondido
-                    if (adSlot) adSlot.style.display = 'none';
-                    // O placeholder já está visível por padrão via CSS.
-                }
-            </script>
-        </div>
-        <!-- Fim do Bloco de Anúncio Manual -->
-
+        <!-- Placeholder para Anúncios Automáticos -->
         <div class="my-8 ads-placeholder-manual">
             <p class="font-bold text-base text-center">
                 ÁREA RESERVADA PARA ANÚNCIOS AUTOMÁTICOS DO ADSENSE (Auto Ads)
@@ -117,22 +71,7 @@
             </a>
         </div>
     </div>
-
-    <!-- 
-    ******************************************************************
-    2. ANÚNCIO IN-FEED (EXEMPLO)
-    ******************************************************************
-    - Este é apenas um exemplo de onde o Auto Ads ou um bloco de anúncio In-Feed
-      poderia ser inserido após o conteúdo principal para maximizar a receita.
-    -->
-    <div class="w-full max-w-4xl p-8 mt-12 bg-white shadow-xl rounded-2xl text-center">
-        <h2 class="text-2xl font-bold text-gray-700 mb-4">Mais para explorar</h2>
-        <p class="text-gray-500 mb-6">Continue rolando para mais conteúdo ou anúncios.</p>
-        
-        <div class="ads-placeholder-manual !min-h-[100px] my-4">
-            <p class="font-bold text-sm">ÁREA RESERVADA PARA ANÚNCIOS IN-FEED OU AUTOMÁTICOS</p>
-        </div>
-    </div>
+    
 </body>
 </html>
 
