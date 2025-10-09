@@ -3,74 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Oficial - Irmo Neto (AdSense Ready)</title>
+    <meta name="description" content="Página oficial de Irmo Zuccato Neto - Analisador de Personalidade pelos Pés e Infoprodutos sobre estudos de personalidade e comportamento humano.">
+    <meta name="keywords" content="análise de personalidade, pés, infoprodutos, Irmo Neto, comportamento humano">
+    <meta name="author" content="Irmo Zuccato Neto">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Irmo Zuccato Neto - Página Oficial">
+    <meta property="og:description" content="Analisador de Personalidade pelos Pés e Infoprodutos exclusivos">
+    <meta property="og:type" content="website">
+    
+    <title>Irmo Zuccato Neto - Página Oficial | Análise de Personalidade e Infoprodutos</title>
 
-    <!-- Configuração do Tailwind CSS para estilo responsivo e moderno -->
+    <!-- Configuração do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        /* Define a fonte Inter para o corpo */
+        /* Define a fonte Inter para melhor legibilidade */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        /* Estilo para simular o espaço do anúncio (cor verde para destaque) */
-        .ads-placeholder-manual {
-            min-height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed #22c55e; /* Borda verde */
-            color: #16a34a; /* Texto verde escuro */
-            background-color: #f0fdf4; /* Fundo verde claro */
-            border-radius: 0.75rem;
-            width: 100%;
-            max-width: 728px; 
+        
+        /* Otimização para Core Web Vitals */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Prevenir Cumulative Layout Shift (CLS) */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Espaçamento para anúncios - áreas reservadas */
+        .ad-space {
+            min-height: 280px;
             margin: 2rem auto;
-            /* Garante que o placeholder seja escondido quando o AdSense carregar */
-            display: flex;
+            max-width: 100%;
+        }
+        
+        /* Smooth scroll para melhor UX */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Transições suaves */
+        a, button {
+            transition: all 0.3s ease;
+        }
+        
+        /* Estilo para seções de conteúdo */
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        /* Otimização de tipografia para legibilidade */
+        p {
+            line-height: 1.7;
+            color: #374151;
+        }
+        
+        h1, h2, h3 {
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        
+        /* Container responsivo otimizado */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
         }
     </style>
 
     <!-- 🟢 CÓDIGO DO ADSENSE PARA AUTO ADS (Anúncios Automáticos) -->
-    <!-- Este script, por si só, ativa os anúncios automáticos em toda a página. -->
+    <!-- Posicionado no <head> conforme recomendação do Google -->
     <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
         crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-blue-50 min-h-screen flex flex-col items-center p-6 text-gray-800">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
     
-    <!-- O PRIMEIRO E ÚNICO CONTAINER -->
-    <div class="max-w-4xl w-full p-8 bg-white shadow-xl rounded-2xl text-center">
-        <!-- Título principal -->
-        <h1 class="text-4xl font-extrabold text-blue-700 mb-4">Olá!!! - Você está na Página Oficial de Irmo Zuccato Neto</h1>
-        
-        <!-- Texto de descrição atualizado -->
-        <p class="text-lg mb-6 text-gray-600">
-            Escolha um dos meus aplicativos ou infoprodutos abaixo para explorar.
-        </p>
+    <!-- Header com navegação semântica -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="content-wrapper" aria-label="Navegação principal">
+            <div class="flex items-center justify-between py-4">
+                <h1 class="text-2xl font-bold text-blue-700">Irmo Zuccato Neto</h1>
+                <div class="text-sm text-gray-600">Especialista em Análise de Personalidade</div>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Placeholder para Anúncios Automáticos -->
-        <div class="my-8 ads-placeholder-manual">
-            <p class="font-bold text-base text-center">
-                ÁREA RESERVADA PARA ANÚNCIOS AUTOMÁTICOS DO ADSENSE (Auto Ads)
+    <!-- Main content com estrutura semântica -->
+    <main class="content-wrapper py-8">
+        
+        <!-- Seção Hero - Apresentação Principal -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8" aria-labelledby="hero-title">
+            <h2 id="hero-title" class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">
+                Olá! Você está na Página Oficial de Irmo Zuccato Neto
+            </h2>
+            
+            <p class="text-lg md:text-xl text-center text-gray-700 mb-6 max-w-3xl mx-auto">
+                Bem-vindo ao espaço dedicado à compreensão profunda da personalidade humana através de métodos únicos e inovadores. Explore meus aplicativos e infoprodutos desenvolvidos com anos de pesquisa e experiência.
+            </p>
+        </section>
+
+        <!-- Espaço para Auto Ads - Área 1 (Above the fold) -->
+        <div class="ad-space"></div>
+
+        <!-- Seção Sobre -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="about-title">
+            <h2 id="about-title" class="text-3xl font-bold text-gray-800 mb-6">
+                Sobre a Análise de Personalidade pelos Pés
+            </h2>
+            
+            <article class="space-y-4">
+                <p class="text-lg">
+                    A análise de personalidade pelos pés é uma metodologia única que combina conhecimentos de podologia, psicologia e comportamento humano. Este método inovador permite identificar padrões de personalidade através da observação cuidadosa das características físicas e comportamentais relacionadas aos pés.
+                </p>
+                
+                <p class="text-lg">
+                    O método tem suas raízes nos ensinamentos de <strong>Imre Somogyi</strong> e <strong>Margareth Somogyi</strong>, pioneiros nesta área de estudo. A partir desta base sólida, ao longo de <strong>25 anos de prática e aprimoramento contínuo</strong>, incorporei diversos estudos e abordagens que trouxeram uma nova visão à técnica original.
+                </p>
+                
+                <p class="text-lg">
+                    Durante esta jornada de aperfeiçoamento, foram integrados conceitos fundamentais do <strong>Eneagrama</strong>, da <strong>Teoria do Cérebro Trino</strong>, da <strong>Neurociência</strong> moderna e da <strong>Psicanálise de Wilhelm Reich</strong>. Esta síntese multidisciplinar resultou em um sistema abrangente que oferece insights valiosos sobre traços de personalidade, tendências comportamentais e características individuais, auxiliando no autoconhecimento e desenvolvimento pessoal.
+                </p>
+                
+                <p class="text-lg">
+                    O método aprimorado ao longo destas duas décadas e meia proporciona uma ferramenta complementar poderosa para profissionais da área de desenvolvimento humano, psicologia, terapia e coaching.
+                </p>
+            </article>
+        </section>
+
+        <!-- Espaço para Auto Ads - Área 2 -->
+        <div class="ad-space"></div>
+
+        <!-- Seção de Aplicativos e Produtos -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="products-title">
+            <h2 id="products-title" class="text-3xl font-bold text-gray-800 mb-6 text-center">
+                Aplicativos e Infoprodutos Disponíveis
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <!-- Card 1 - Analisador -->
+                <article class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">
+                        Analisador de Personalidade pelos Pés
+                    </h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Aplicativo interativo que permite realizar análises detalhadas de personalidade utilizando o método exclusivo desenvolvido por Irmo Neto. Ferramenta prática e intuitiva para profissionais e entusiastas.
+                    </p>
+                    <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-all duration-300">
+                        Acessar Analisador →
+                    </a>
+                </article>
+
+                <!-- Card 2 - Infoprodutos -->
+                <article class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-2xl font-bold text-orange-700 mb-4">
+                        Infoprodutos Exclusivos
+                    </h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Acesse conteúdos exclusivos, cursos, e-books e materiais didáticos sobre análise de personalidade, comportamento humano e desenvolvimento pessoal. Conhecimento aprofundado baseado em anos de pesquisa.
+                    </p>
+                    <a href="https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-block w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-all duration-300">
+                        Ver Infoprodutos →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Espaço para Auto Ads - Área 3 -->
+        <div class="ad-space"></div>
+
+        <!-- Seção de Benefícios -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="benefits-title">
+            <h2 id="benefits-title" class="text-3xl font-bold text-gray-800 mb-6 text-center">
+                Benefícios do Método
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 mt-8">
+                <article class="text-center p-6 bg-blue-50 rounded-xl">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Autoconhecimento</h3>
+                    <p class="text-gray-600">
+                        Descubra aspectos profundos da sua personalidade e compreenda melhor seus padrões comportamentais.
+                    </p>
+                </article>
+                
+                <article class="text-center p-6 bg-indigo-50 rounded-xl">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">25 Anos de Aprimoramento</h3>
+                    <p class="text-gray-600">
+                        Método aperfeiçoado ao longo de duas décadas e meia, integrando Eneagrama, Neurociência, Cérebro Trino e Wilhelm Reich.
+                    </p>
+                </article>
+                
+                <article class="text-center p-6 bg-purple-50 rounded-xl">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Aplicação Prática</h3>
+                    <p class="text-gray-600">
+                        Ferramentas e conhecimentos que podem ser aplicados imediatamente no desenvolvimento pessoal e profissional.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Espaço para Auto Ads - Área 4 -->
+        <div class="ad-space"></div>
+
+        <!-- Seção de Conteúdo Adicional -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="content-title">
+            <h2 id="content-title" class="text-3xl font-bold text-gray-800 mb-6">
+                Por que Escolher Este Método?
+            </h2>
+            
+            <article class="space-y-4">
+                <p class="text-lg">
+                    O método de análise de personalidade pelos pés se destaca por sua abordagem holística e inovadora. Diferente de outros métodos tradicionais, esta técnica oferece uma perspectiva única que complementa outras ferramentas de análise comportamental. Com <strong>25 anos de aprimoramento contínuo</strong>, o método evoluiu significativamente desde seus fundamentos originais.
+                </p>
+                
+                <p class="text-lg">
+                    A integração de múltiplas disciplinas - incluindo o <strong>Eneagrama</strong> para compreensão dos tipos de personalidade, a <strong>Teoria do Cérebro Trino</strong> para entendimento das camadas cerebrais, a <strong>Neurociência</strong> moderna e os conceitos da <strong>Psicanálise de Wilhelm Reich</strong> sobre couraça caracterológica - criou um sistema verdadeiramente abrangente e profundo.
+                </p>
+                
+                <p class="text-lg">
+                    Profissionais de diversas áreas, incluindo psicólogos, coaches, terapeutas e consultores de recursos humanos, têm utilizado este método como ferramenta complementar em seus atendimentos, obtendo resultados significativos na compreensão de seus clientes.
+                </p>
+                
+                <p class="text-lg">
+                    Os infoprodutos disponíveis foram cuidadosamente desenvolvidos para proporcionar um aprendizado progressivo e prático, permitindo que tanto iniciantes quanto profissionais experientes possam se beneficiar do conteúdo acumulado ao longo destas duas décadas e meia de experiência.
+                </p>
+            </article>
+        </section>
+
+        <!-- Espaço para Auto Ads - Área 5 -->
+        <div class="ad-space"></div>
+
+    </main>
+
+    <!-- Footer semântico -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="content-wrapper text-center">
+            <p class="text-lg mb-2">© 2024 Irmo Zuccato Neto - Todos os direitos reservados</p>
+            <p class="text-gray-400 text-sm">
+                Análise de Personalidade | Desenvolvimento Humano | Infoprodutos
             </p>
         </div>
+    </footer>
 
+    <!-- Schema.org markup para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Irmo Zuccato Neto",
+        "description": "Especialista em análise de personalidade pelos pés e desenvolvimento humano",
+        "url": "https://irmoneto.github.io/",
+        "sameAs": [
+            "https://irmoneto.github.io/Analisador-Personalidade-Pes/",
+            "https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/"
+        ]
+    }
+    </script>
 
-        <!-- Links -->
-        <div class="flex flex-col space-y-4 items-center mt-8">
-            <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" target="_blank"
-               class="w-full max-w-sm bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
-                Analisador da Personalidade pelos Pés
-            </a>
-
-            <!-- LINK do botão de Infoprodutos ATUALIZADO -->
-            <a href="https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/" target="_blank"
-               class="w-full max-w-sm bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
-                Infoprodutos disponíveis sobre meus estudos
-            </a>
-        </div>
-    </div>
-    
 </body>
 </html>
