@@ -8,14 +8,12 @@
     <meta name="author" content="Irmo Zuccato Neto">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph para redes sociais -->
     <meta property="og:title" content="Irmo Zuccato Neto - Página Oficial">
     <meta property="og:description" content="Analisador de Personalidade pelos Pés e Infoprodutos exclusivos">
     <meta property="og:type" content="website">
     
     <title>Irmo Zuccato Neto - Página Oficial | Análise de Personalidade e Infoprodutos</title>
 
-    <!-- Configuração do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
@@ -35,11 +33,13 @@
             height: auto;
         }
         
-        /* Espaçamento para anúncios - áreas reservadas */
+        /* Espaçamento para anúncios - áreas reservadas (ajustado min-height) */
         .ad-space {
-            min-height: 280px;
+            min-height: 100px; /* Reduzido o min-height, pois Auto Ads não precisam de tanto espaço reservado, mas é bom manter um mínimo. */
             margin: 2rem auto;
             max-width: 100%;
+            /* Adicionado um estilo visual temporário para teste - REMOVA isso quando o AdSense estiver ativo */
+            /* border: 1px dashed #ccc; padding: 10px; text-align: center; color: #ccc; */
         }
         
         /* Smooth scroll para melhor UX */
@@ -76,8 +76,6 @@
         }
     </style>
 
-    <!-- 🟢 CÓDIGO DO ADSENSE PARA AUTO ADS (Anúncios Automáticos) -->
-    <!-- Posicionado no <head> conforme recomendação do Google -->
     <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
         crossorigin="anonymous"></script>
@@ -85,7 +83,6 @@
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
     
-    <!-- Header com navegação semântica -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="content-wrapper" aria-label="Navegação principal">
             <div class="flex items-center justify-between py-4">
@@ -95,10 +92,8 @@
         </nav>
     </header>
 
-    <!-- Main content com estrutura semântica -->
     <main class="content-wrapper py-8">
         
-        <!-- Seção Hero - Apresentação Principal -->
         <section class="bg-white rounded-2xl shadow-xl p-8 mb-8" aria-labelledby="hero-title">
             <h2 id="hero-title" class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">
                 Olá! Você está na Página Oficial de Irmo Zuccato Neto
@@ -109,10 +104,8 @@
             </p>
         </section>
 
-        <!-- Espaço para Auto Ads - Área 1 (Above the fold) -->
         <div class="ad-space"></div>
 
-        <!-- Seção Sobre -->
         <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="about-title">
             <h2 id="about-title" class="text-3xl font-bold text-gray-800 mb-6">
                 Sobre a Análise de Personalidade pelos Pés
@@ -137,17 +130,14 @@
             </article>
         </section>
 
-        <!-- Espaço para Auto Ads - Área 2 -->
         <div class="ad-space"></div>
 
-        <!-- Seção de Aplicativos e Produtos -->
         <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="products-title">
             <h2 id="products-title" class="text-3xl font-bold text-gray-800 mb-6 text-center">
                 Aplicativos e Infoprodutos Disponíveis
             </h2>
             
             <div class="grid md:grid-cols-2 gap-6 mt-8">
-                <!-- Card 1 - Analisador -->
                 <article class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow">
                     <h3 class="text-2xl font-bold text-indigo-700 mb-4">
                         Analisador de Personalidade pelos Pés
@@ -163,7 +153,6 @@
                     </a>
                 </article>
 
-                <!-- Card 2 - Infoprodutos -->
                 <article class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow">
                     <h3 class="text-2xl font-bold text-orange-700 mb-4">
                         Infoprodutos Exclusivos
@@ -181,10 +170,8 @@
             </div>
         </section>
 
-        <!-- Espaço para Auto Ads - Área 3 -->
         <div class="ad-space"></div>
 
-        <!-- Seção de Benefícios -->
         <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="benefits-title">
             <h2 id="benefits-title" class="text-3xl font-bold text-gray-800 mb-6 text-center">
                 Benefícios do Método
@@ -217,10 +204,8 @@
             </div>
         </section>
 
-        <!-- Espaço para Auto Ads - Área 4 -->
         <div class="ad-space"></div>
 
-        <!-- Seção de Conteúdo Adicional -->
         <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="content-title">
             <h2 id="content-title" class="text-3xl font-bold text-gray-800 mb-6">
                 Por que Escolher Este Método?
@@ -245,12 +230,10 @@
             </article>
         </section>
 
-        <!-- Espaço para Auto Ads - Área 5 -->
         <div class="ad-space"></div>
 
     </main>
 
-    <!-- Footer semântico -->
     <footer class="bg-gray-800 text-white py-8 mt-12">
         <div class="content-wrapper text-center">
             <p class="text-lg mb-2">© 2024 Irmo Zuccato Neto - Todos os direitos reservados</p>
@@ -260,7 +243,6 @@
         </div>
     </footer>
 
-    <!-- Schema.org markup para SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
