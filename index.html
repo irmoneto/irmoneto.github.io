@@ -86,8 +86,18 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="content-wrapper" aria-label="Navegação principal">
             <div class="flex items-center justify-between py-4">
-                <h1 class="text-2xl font-bold text-blue-700">Irmo Zuccato Neto</h1>
-                <div class="text-sm text-gray-600">Especialista na Análise da Personalidade Pelos Pés</div>
+                
+                <!-- NOVO: Logo e Título Principal -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://raw.githubusercontent.com/irmoneto/Analisador-Personalidade-Pes/main/IMAGENS%20APP/LOGO.jpg" 
+                         alt="Logo de Irmo Zuccato Neto" 
+                         class="h-10 w-10 rounded-lg object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/40x40/007bff/ffffff?text=LOGO'">
+                    <h1 class="text-2xl font-bold text-blue-700">Irmo Zuccato Neto</h1>
+                </div>
+                
+                <!-- O texto de especialidade é escondido em telas pequenas para manter a clareza do cabeçalho -->
+                <div class="text-sm text-gray-600 hidden sm:block">Especialista na Análise da Personalidade Pelos Pés</div>
             </div>
         </nav>
     </header>
@@ -224,7 +234,7 @@
                 </p>
                 
                 <p class="text-lg">
-                    Profissionais de diversas áreas, incluindo psicólogos, coaches, terapeutas e consultores de recursos humanos, têm utilizado este método como ferramenta complementar em seus atendimentos, obtendo resultados significativos na compreensão de seus clientes.
+                    Profissionais de diversas áreas, incluindo psicólogos, coaches, terapeutas e consultores de recursos humanos, têm utilizado este método como ferramenta complementar em seus atendimentos, obtendo resultados significantes na compreensão de seus clientes.
                 </p>
                 
                 <p class="text-lg">
