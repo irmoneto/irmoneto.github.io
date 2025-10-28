@@ -3,270 +3,454 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página oficial de Irmo Zuccato Neto - Analisador de Personalidade pelos Pés e Infoprodutos sobre estudos de personalidade e comportamento humano.">
-    <meta name="keywords" content="análise de personalidade, pés, infoprodutos, Irmo Neto, comportamento humano">
+    <meta name="description" content="Descubra o mapa completo da sua personalidade através da Análise pelos Pés. Método exclusivo que integra Neurociência, Epigenética e Psicologia Corporal de Reich. Especialista com 25 anos de experiência.">
+    <meta name="keywords" content="análise de personalidade, pés, psicologia corporal, Reich, neurociência, epigenética, desenvolvimento humano, autoconhecimento">
     <meta name="author" content="Irmo Zuccato Neto">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Irmo Zuccato Neto - Página Oficial">
-    <meta property="og:description" content="Analisador de Personalidade pelos Pés e Infoprodutos exclusivos">
+    <meta property="og:title" content="Descubra Sua Personalidade pelos Pés | Irmo Zuccato Neto">
+    <meta property="og:description" content="Método exclusivo que integra Neurociência, Epigenética e Traços de Caráter de Reich. 25 anos de pesquisa aprofundada.">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#2563eb">
     
-    <title>Irmo Zuccato Neto - Página Oficial | Análise de Personalidade e Infoprodutos</title>
-
+    <title>Descubra Sua Personalidade pelos Pés | Irmo Zuccato Neto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
-        /* Define a fonte Inter para melhor legibilidade */
+        /* Define a fonte Inter para o corpo */
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
         }
-        
-        /* Otimização para Core Web Vitals */
-        * {
-            box-sizing: border-box;
+                /* Estilos para animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
-        /* Prevenir Cumulative Layout Shift (CLS) */
-        img {
-            max-width: 100%;
-            height: auto;
+                .fade-in {
+            animation: fadeIn 0.6s ease-in-out;
         }
-        
-        /* Espaçamento para anúncios - áreas reservadas (ajustado min-height) */
-        .ad-space {
-            min-height: 100px; /* Reduzido o min-height, pois Auto Ads não precisam de tanto espaço reservado, mas é bom manter um mínimo. */
-            margin: 2rem auto;
-            max-width: 100%;
-            /* Adicionado um estilo visual temporário para teste - REMOVA isso quando o AdSense estiver ativo */
-            /* border: 1px dashed #ccc; padding: 10px; text-align: center; color: #ccc; */
+                /* Estilo para simular o espaço do anúncio (para visualização antes da aprovação) */
+        .ads-placeholder-manual {
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #059669;
+            color: #047857;
+            background-color: #f0fdf4;
+            border-radius: 0.75rem;
+            width: 100%;
+            max-width: 728px; 
+            margin: 2.5rem auto;
+            font-size: 0.875rem;
         }
-        
-        /* Smooth scroll para melhor UX */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Transições suaves */
-        a, button {
-            transition: all 0.3s ease;
-        }
-        
-        /* Estilo para seções de conteúdo */
-        section {
-            margin-bottom: 3rem;
-        }
-        
-        /* Otimização de tipografia para legibilidade */
-        p {
-            line-height: 1.7;
-            color: #374151;
-        }
-        
-        h1, h2, h3 {
-            line-height: 1.3;
-            font-weight: 700;
-        }
-        
-        /* Container responsivo otimizado */
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
+                /* Estilo para o banner de consentimento */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            color: white;
             padding: 1.5rem;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+                .cookie-banner.show {
+            display: block;
+        }
+                .cookie-banner.hidden {
+            display: none;
+        }
+                /* Estilo para botões de CTA */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+                .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+                .cta-button:active {
+            transform: translateY(0);
+        }
+                /* Estilo para a seção hero */
+        .hero-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+                /* Estilo para cards de testemunhos (mantido para estrutura futura) */
+        .testimonial-card {
+            background-color: #f9fafb;
+            border-left: 4px solid #2563eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+                .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+                /* Estilo para FAQ (mantido para estrutura futura) */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+                .faq-item:last-child {
+            border-bottom: none;
+        }
+                .faq-toggle {
+            cursor: pointer;
+            user-select: none;
+        }
+                .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+                .faq-content.open {
+            max-height: 500px;
+        }
+        /* Estilo para quebrar o título em duas linhas em telas pequenas */
+        .title-break span {
+            display: block;
+        }
+        /* NOVO ESTILO: Bloco de Vídeo Estático (Solução para Erro 153) */
+        .video-box {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .video-thumbnail-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .video-box:hover .video-thumbnail-image {
+            transform: scale(1.05);
+        }
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
+        }
+        .play-overlay:hover {
+            background-color: rgba(255, 0, 0, 0.6);
+        }
+        .play-icon-svg {
+            fill: white;
+            width: 70px;
+            height: 70px;
+        }
+        /* NOVO ESTILO: Para o logo no título */
+        .hero-title-container {
+            display: flex;
+            align-items: center; /* Alinha o logo e o texto verticalmente */
+            justify-content: center; /* Centraliza o conjunto de logo e texto */
+            flex-wrap: wrap; /* Permite que o logo e o título quebrem a linha em telas pequenas */
+            gap: 1rem; /* Espaçamento entre o logo e o texto */
+        }
+        .hero-logo {
+            max-height: 80px; /* Tamanho do logo */
+            width: auto;
+            border-radius: 50%; /* Opcional: para logos circulares */
+            object-fit: contain; /* Garante que a imagem não seja cortada */
+        }
+        /* Ajustes para telas menores para o logo e título */
+        @media (max-width: 640px) { /* sm breakpoint no Tailwind */
+            .hero-logo {
+                max-height: 60px; /* Menor em telas pequenas */
+            }
+            .hero-title-container {
+                flex-direction: column; /* Empilha o logo e o texto em telas pequenas */
+                gap: 0.5rem;
+            }
         }
     </style>
-
     <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
         crossorigin="anonymous"></script>
-
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6256662778"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // ID INSERIDO: G-6256662778
+        gtag('config', 'G-6256662778'); 
+    </script>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
-    
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="content-wrapper" aria-label="Navegação principal">
-            <div class="flex items-center justify-between py-4">
-                
-                <!-- NOVO: Logo e Título Principal -->
-                <div class="flex items-center space-x-3">
-                    <img src="https://raw.githubusercontent.com/irmoneto/Analisador-Personalidade-Pes/main/IMAGENS%20APP/LOGO.jpg" 
-                         alt="Logo de Irmo Zuccato Neto" 
-                         class="h-10 w-10 rounded-lg object-cover"
-                         onerror="this.onerror=null; this.src='https://placehold.co/40x40/007bff/ffffff?text=LOGO'">
-                    <h1 class="text-2xl font-bold text-blue-700">Irmo Zuccato Neto</h1>
-                </div>
-                
-                <!-- O texto de especialidade é escondido em telas pequenas para manter a clareza do cabeçalho -->
-                <div class="text-sm text-gray-600 hidden sm:block">Especialista na Análise da Personalidade Pelos Pés</div>
-            </div>
-        </nav>
-    </header>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center text-gray-800">
 
-    <main class="content-wrapper py-8">
-        
-        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8" aria-labelledby="hero-title">
-            <!-- TÍTULO ATUALIZADO CONFORME SOLICITADO -->
-            <h2 id="hero-title" class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">
-                Olá! - Você está na Página Oficial de
-                <br>Irmo Zuccato Neto
-            </h2>
-            
-            <!-- SUBTÍTULO ATUALIZADO CONFORME SOLICITADO -->
-            <p class="text-lg md:text-xl text-center text-gray-700 mb-6 max-w-3xl mx-auto">
-                Bem-vindo ao espaço dedicado à compreensão profunda da personalidade humana através de métodos únicos e inovadores. Explore meus aplicativos e infoprodutos desenvolvidos com anos de pesquisa e experiência.
+    <section class="hero-section w-full py-16 px-6 text-center text-white fade-in">
+        <div class="max-w-4xl mx-auto">
+            <div class="hero-title-container mb-4">
+                <img src="https://raw.githubusercontent.com/irmoneto/Analisador-Personalidade-Pes/main/IMAGENS%20APP/LOGO.jpg" alt="Logo Irmo Zuccato Neto" class="hero-logo">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight title-break">
+                    Irmo Zuccato Neto
+                    <span class="block text-2xl sm:text-3xl font-light mt-1">
+                        Análise de Personalidade pelos Pés
+                    </span>
+                </h1>
+            </div>
+            <p class="text-lg sm:text-xl mb-8 text-blue-100">
+                A Análise pelos Pés que integra Neurociência, Epigenética e Traços de Caráter de Reich
             </p>
-        </section>
+            <a href="#analisador"
+                class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg cta-button hover:bg-blue-50">
+                Comece Sua Análise Agora
+            </a>
+        </div>
+    </section>
 
-        <div class="ad-space"></div>
-
-        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="about-title">
-            <h2 id="about-title" class="text-3xl font-bold text-gray-800 mb-6">
-                Sobre a Análise de Personalidade pelos Pés
+    <div class="max-w-4xl w-full p-8 sm:p-10 bg-white shadow-xl rounded-2xl text-center my-8 mx-6 fade-in">
+        <div class="text-left mb-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+                Irmo Zuccato Neto
             </h2>
-            
-            <article class="space-y-4">
-                <p class="text-lg">
-                    A análise de personalidade pelos pés é uma metodologia única que combina conhecimentos de podologia, psicologia e comportamento humano. Este método inovador permite identificar padrões de personalidade através da observação cuidadosa das características físicas e comportamentais relacionadas aos pés.
-                </p>
-                
-                <p class="text-lg">
-                    O método tem suas raízes nos ensinamentos de <strong>Imre Somogyi</strong> e <strong>Margareth Somogyi</strong>, pioneiros nesta área de estudo. A partir desta base sólida, ao longo de <strong>25 anos de prática e aprimoramento contínuo</strong>, incorporei diversos estudos e abordagens que trouxeram uma nova visão à técnica original.
-                </p>
-                
-                <p class="text-lg">
-                    Durante esta jornada de aperfeiçoamento, foram integrados conceitos fundamentais do <strong>Eneagrama</strong>, da <strong>Teoria do Cérebro Trino</strong>, da <strong>Neurociência</strong> moderna e da <strong>Psicanálise de Wilhelm Reich</strong>. Esta síntese multidisciplinar resultou em um sistema abrangente que oferece insights valiosos sobre traços de personalidade, tendências comportamentais e características individuais, auxiliando no autoconhecimento e desenvolvimento pessoal.
-                </p>
-                
-                <p class="text-lg">
-                    O método aprimorado ao longo destas duas décadas e meia proporciona uma ferramenta complementar poderosa para profissionais da área de desenvolvimento humano, psicologia, terapia e coaching.
-                </p>
-            </article>
-        </section>
-
-        <div class="ad-space"></div>
-
-        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="products-title">
-            <h2 id="products-title" class="text-3xl font-bold text-gray-800 mb-6 text-center">
-                Aplicativos e Infoprodutos Disponíveis
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-6 mt-8">
-                <article class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 shadow-md">
-                    <h3 class="text-2xl font-bold text-indigo-700 mb-4">
-                        Analisador de Personalidade pelos Pés
-                    </h3>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Aplicativo interativo que permite realizar análises detalhadas de personalidade utilizando o método exclusivo desenvolvido por Irmo Neto. Ferramenta prática e intuitiva para profissionais e entusiastas.
-                    </p>
-                    <!-- BOTÃO DESATIVADO E INFORMATIVO -->
-                    <div class="inline-block w-full bg-gray-400 text-white font-semibold py-4 px-6 rounded-lg shadow-lg text-center cursor-not-allowed">
-                        Lançamento em Novembro (Em Breve)
-                    </div>
-                </article>
-
-                <article class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-bold text-orange-700 mb-4">
-                        Infoprodutos Exclusivos
-                    </h3>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Acesse conteúdos exclusivos, cursos, e-books e materiais didáticos sobre análise de personalidade, comportamento humano e desenvolvimento pessoal. Conhecimento aprofundado baseado em anos de pesquisa.
-                    </p>
-                    <a href="https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/" 
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-block w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-all duration-300">
-                        Ver Infoprodutos →
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <div class="ad-space"></div>
-
-        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="benefits-title">
-            <h2 id="benefits-title" class="text-3xl font-bold text-gray-800 mb-6 text-center">
-                Benefícios do Método
-            </h2>
-            
-            <div class="grid md:grid-cols-3 gap-6 mt-8">
-                <article class="text-center p-6 bg-blue-50 rounded-xl">
-                    <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Autoconhecimento</h3>
-                    <p class="text-gray-600">
-                        Descubra aspectos profundos da sua personalidade e compreenda melhor seus padrões comportamentais.
-                    </p>
-                </article>
-                
-                <article class="text-center p-6 bg-indigo-50 rounded-xl">
-                    <div class="text-4xl mb-4">📚</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">25 Anos de Aprimoramento</h3>
-                    <p class="text-gray-600">
-                        Método aperfeiçoado ao longo de duas décadas e meia, integrando Eneagrama, Neurociência, Cérebro Trino e Wilhelm Reich.
-                    </p>
-                </article>
-                
-                <article class="text-center p-6 bg-purple-50 rounded-xl">
-                    <div class="text-4xl mb-4">💡</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Aplicação Prática</h3>
-                    <p class="text-gray-600">
-                        Ferramentas e conhecimentos que podem ser aplicados imediatamente no desenvolvimento pessoal e profissional.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <div class="ad-space"></div>
-
-        <section class="bg-white rounded-2xl shadow-lg p-8 mb-8" aria-labelledby="content-title">
-            <h2 id="content-title" class="text-3xl font-bold text-gray-800 mb-6">
-                Por que Escolher Este Método?
-            </h2>
-            
-            <article class="space-y-4">
-                <p class="text-lg">
-                    O método de análise de personalidade pelos pés se destaca por sua abordagem holística e inovadora. Diferente de outros métodos tradicionais, esta técnica oferece uma perspectiva única que complementa outras ferramentas de análise comportamental. Com <strong>25 anos de aprimoramento contínuo</strong>, o método evoluiu significativamente desde seus fundamentos originais.
-                </p>
-                
-                <p class="text-lg">
-                    A integração de múltiplas disciplinas - incluindo o <strong>Eneagrama</strong> para compreensão dos tipos de personalidade, a <strong>Teoria do Cérebro Trino</strong> para entendimento das camadas cerebrais, a <strong>Neurociência</strong> moderna e os conceitos da <strong>Psicanálise de Wilhelm Reich</strong> sobre couraça caracterológica - criou um sistema verdadeiramente abrangente e profundo.
-                </p>
-                
-                <p class="text-lg">
-                    Profissionais de diversas áreas, incluindo psicólogos, coaches, terapeutas e consultores de recursos humanos, têm utilizado este método como ferramenta complementar em seus atendimentos, obtendo resultados significantes na compreensão de seus clientes.
-                </p>
-                
-                <p class="text-lg">
-                    Os infoprodutos disponíveis foram cuidadosamente desenvolvidos para proporcionar um aprendizado progressivo e prático, permitindo que tanto iniciantes quanto profissionais experientes possam se beneficiar do conteúdo acumulado ao longo destas duas décadas e meia de experiência.
-                </p>
-            </article>
-        </section>
-
-        <div class="ad-space"></div>
-
-    </main>
-
-    <footer class="bg-gray-800 text-white py-8 mt-12">
-        <div class="content-wrapper text-center">
-            <p class="text-lg mb-2">© 2024 Irmo Zuccato Neto - Todos os direitos reservados</p>
-            <p class="text-gray-400 text-sm">
-                Análise de Personalidade | Desenvolvimento Humano | Infoprodutos
+            <p class="text-lg text-blue-600 font-semibold">
+                Especialista em Análise de Personalidade pelos Pés
+            </p>
+            <p class="text-gray-600 mt-2 leading-relaxed">
+                Método exclusivo aprimorado em <strong>25 anos</strong> de pesquisa, integrando Epigenética, Neurociência e os Traços de Caráter de Wilhelm Reich para oferecer um mapa completo e profundo da personalidade humana.
             </p>
         </div>
+
+        <div class="my-8 ads-placeholder-manual mx-auto">
+            <p class="font-bold text-base text-center">ÁREA RESERVADA PARA ANÚNCIOS DO ADSENSE<br><span class="text-sm">Anúncios automáticos ou blocos de anúncios responsivos</span></p>
+        </div>
+
+        <hr class="my-10 border-t border-gray-200">
+
+        <section class="text-left mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 mb-6 border-b-2 border-blue-600 pb-3" id="metodologia">Fundamentos e Metodologia da Análise</h2>
+
+            <p class="mb-6 text-gray-700 leading-relaxed text-justify">
+                A Análise de Personalidade pelos Pés é uma metodologia única e profunda, fruto de mais de duas décadas e meia de pesquisa e aprimoramento contínuo. Nosso método transcende abordagens simplistas, focando na integração de conhecimentos empíricos e científicos para oferecer um mapa completo da personalidade humana. Cada detalhe dos pés revela padrões comportamentais, traços emocionais e potenciais de desenvolvimento pessoal.
+            </p>
+            <h3 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Pilares Integrados e Científicos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                    <h4 class="font-bold text-blue-700 mb-2">Psicologia Corporal de Reich</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Aplicação dos conceitos de Wilhelm Reich sobre a "couraça caracterológica", explorando como as defesas emocionais se manifestam na estrutura física e identificando os Traços de Caráter (Oral, Masoquista, etc.) refletidos nos pés.
+                    </p>
+                </div>
+                <div class="p-6 bg-green-50 rounded-lg border-l-4 border-green-600">
+                    <h4 class="font-bold text-green-700 mb-2">Epigenética e Caráter</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Estudo de como fatores ambientais e traumas emocionais na infância ativam ou silenciam a expressão genética, moldando o corpo e a personalidade de forma única e dinâmica.
+                    </p>
+                </div>
+                <div class="p-6 bg-purple-50 rounded-lg border-l-4 border-purple-600">
+                    <h4 class="font-bold text-purple-700 mb-2">Neurociência Aplicada</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Integração da Teoria do Cérebro Trino para um entendimento profundo das camadas cerebrais e sua influência direta no comportamento e reações emocionais.
+                    </p>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed text-justify">
+                Essa síntese multidisciplinar fornece uma ferramenta robusta para o autoconhecimento, essencial para coaches, terapeutas, profissionais de desenvolvimento humano e para qualquer pessoa em busca de compreensão profunda sobre seus padrões de vida e potencial de transformação pessoal.
+            </p>
+
+            <div class="mt-8 p-4 bg-red-50 border-l-4 border-red-500 text-red-800 rounded">
+                <p class="font-bold text-lg mb-2">⚠️ Aviso de Isenção de Responsabilidade (Disclaimer)</p>
+                <p class="text-sm leading-relaxed">
+                    Este método, os aplicativos e infoprodutos têm fins estritamente informativos, de autoconhecimento e desenvolvimento pessoal. Eles <strong>NÃO</strong> substituem, em nenhuma circunstância, consulta, diagnóstico ou tratamento médico, psicológico ou psiquiátrico profissional. Para questões de saúde mental ou física, consulte sempre um profissional qualificado.
+                </p>
+            </div>
+        </section>
+
+        <hr class="my-10 border-t border-gray-200">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 mb-8 border-b-2 border-blue-600 pb-3">Conteúdo em Vídeo: Destaques do Canal</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed text-center">
+                Confira nossos vídeos mais relevantes sobre personalidade, corpo e desenvolvimento. Clique na miniatura para assistir no YouTube.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <a href="https://www.youtube.com/watch?v=qj03Dd958jc" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="video-box">
+                        <img class="video-thumbnail-image" src="https://img.youtube.com/vi/qj03Dd958jc/mqdefault.jpg" alt="Miniatura do Vídeo Reintegração Mente-Corpo">
+                        <div class="play-overlay">
+                            <svg class="play-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2-4h8v2H8v-2zm-2-4h12V9H6v2zm-2-4V5h16v2H4z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-4 text-left">
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Reintegração Mente-Corpo</h3>
+                        <p class="text-sm text-gray-600">A importância de conectar o físico e o mental.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=NKr2VBzjQlY" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="video-box">
+                        <img class="video-thumbnail-image" src="https://img.youtube.com/vi/NKr2VBzjQlY/mqdefault.jpg" alt="Miniatura do Vídeo Pés e Emoções">
+                        <div class="play-overlay">
+                            <svg class="play-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2-4h8v2H8v-2zm-2-4h12V9H6v2zm-2-4V5h16v2H4z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-4 text-left">
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Pés e Emoções</h3>
+                        <p class="text-sm text-gray-600">A relação dos dedos com o sentimento de vergonha.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=IXOZUVQm4VU" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="video-box">
+                        <img class="video-thumbnail-image" src="https://img.youtube.com/vi/IXOZUVQm4VU/mqdefault.jpg" alt="Miniatura do E-book O CÓDIGO KALI">
+                        <div class="play-overlay">
+                            <svg class="play-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2-4h8v2H8v-2zm-2-4h12V9H6v2zm-2-4V5h16v2H4z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-4 text-left">
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Lançamento Exclusivo</h3>
+                        <p class="text-sm text-gray-600">Conheça o novo E-book: O CÓDIGO KALI.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="http://www.youtube.com/user/irmoneto" target="_blank"
+                    class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    ▶️ Inscreva-se e Veja Mais Vídeos no Canal
+                </a>
+            </div>
+        </section>
+
+        <hr class="my-10 border-t border-gray-200">
+
+        <section class="mb-8" id="recursos">
+            <h2 class="text-3xl font-bold text-blue-600 mb-8 border-b-2 border-blue-600 pb-3">Acesse Nossas Ferramentas e Cursos</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed text-center">
+                Escolha a forma que melhor se adequa ao seu objetivo de desenvolvimento pessoal e autoconhecimento.
+            </p>
+            <div class="flex flex-col space-y-4 items-center">
+                <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" target="_blank" id="analisador"
+                    class="w-full max-w-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    🔍 Acesse o Analisador da Personalidade pelos Pés
+                </a>
+                <a href="https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/" target="_blank"
+                    class="w-full max-w-lg bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    📚 Infoprodutos e Cursos (Aprofundamento)
+                </a>
+                <a href="https://irmoneto.github.io/blog/" target="_blank"
+                    class="w-full max-w-lg bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    ✍️ Leia Nossos Artigos no Blog
+                </a>
+            </div>
+        </section>
+
+        <div class="my-8 ads-placeholder-manual mx-auto">
+            <p class="font-bold text-base text-center">ÁREA RESERVADA PARA ANÚNCIOS DO ADSENSE<br><span class="text-sm">Anúncios automáticos ou blocos de anúncios responsivos</span></p>
+        </div>
+    </div>
+
+    <footer class="w-full max-w-4xl p-6 mt-8 text-sm text-gray-600 border-t border-gray-300 bg-white shadow-xl rounded-2xl text-center mx-6 mb-8">
+        <div class="mb-4">
+            <a href="http://www.youtube.com/user/irmoneto" target="_blank" class="text-red-600 hover:text-red-800 font-bold transition duration-150 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                Visite nosso Canal no YouTube
+            </a>
+        </div>
+        <p class="mb-4">© 2025 Irmo Zuccato Neto. Todos os direitos reservados.</p>
+        <nav class="flex flex-wrap justify-center space-x-4 text-xs sm:text-sm font-medium">
+            <a href="politica-privacidade.html" class="hover:text-blue-700 transition duration-150">Política de Privacidade</a>
+            <span class="text-gray-400">|</span>
+            <a href="termos-de-uso.html" class="hover:text-blue-700 transition duration-150">Termos de Uso</a>
+            <span class="text-gray-400">|</span>
+            <a href="contato.html" class="hover:text-blue-700 transition duration-150">Contato</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="hover:text-blue-700 transition duration-150" onclick="showCookieBanner(); return false;">Configurar Cookies</a>
+        </nav>
     </footer>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Irmo Zuccato Neto",
-        "description": "Especialista em análise de personalidade pelos pés e desenvolvimento humano",
-        "url": "https://irmoneto.github.io/",
-        "sameAs": [
-            "https://irmoneto.github.io/Analisador-Personalidade-Pes/",
-            "https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/"
-        ]
-    }
-    </script>
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex-1">
+                <p class="text-sm sm:text-base">
+                    🍪 Utilizamos cookies para melhorar sua experiência e cumprir com as regulamentações de privacidade (LGPD/GDPR). Ao continuar navegando, você concorda com nossa <a href="politica-privacidade.html" class="underline hover:text-blue-300">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="flex gap-3 flex-shrink-0">
+                <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">
+                    Aceitar
+                </button>
+                <button onclick="rejectCookies()" class="bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded transition">
+                    Rejeitar
+                </button>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        // Função para alternar FAQ
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('span');
+
+            content.classList.toggle('open');
+            icon.textContent = content.classList.contains('open') ? '−' : '+';
+        }
+
+        // Função para mostrar banner de cookies
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.add('show');
+            banner.classList.remove('hidden');
+        }
+
+        // Função para aceitar cookies
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.add('hidden');
+            document.getElementById('cookieBanner').classList.remove('show');
+
+            // Aqui você pode adicionar lógica para habilitar rastreamento completo
+            console.log('Cookies aceitos');
+        }
+
+        // Função para rejeitar cookies
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.add('hidden');
+            document.getElementById('cookieBanner').classList.remove('show');
+
+            // Aqui você pode adicionar lógica para desabilitar rastreamento não-essencial
+            console.log('Cookies rejeitados');
+        }
+
+        // Verificar consentimento de cookies ao carregar a página
+        window.addEventListener('load', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                // Mostrar banner se não houver consentimento prévio
+                setTimeout(showCookieBanner, 1000);
+            }
+        });
+
+        // Inicializar anúncios automáticos do AdSense (se configurado)
+        window.addEventListener('load', function() {
+            if (window.adsbygoogle) {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {
+                    console.log('AdSense ainda não está pronto ou não foi aprovado');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
