@@ -1,341 +1,469 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 Black Friday 50% OFF - Cursos e E-books</title>
+    <meta name="description" content="Descubra o mapa completo da sua personalidade através da Análise pelos Pés. Método exclusivo que integra Neurociência, Epigenética e Psicologia Corporal de Reich. Especialista com 25 anos de experiência.">
+    <meta name="keywords" content="análise de personalidade, pés, psicologia corporal, Reich, neurociência, epigenética, desenvolvimento humano, autoconhecimento">
+    <meta name="author" content="Irmo Zuccato Neto">
+    <meta property="og:title" content="Descubra Sua Personalidade pelos Pés | Irmo Zuccato Neto">
+    <meta property="og:description" content="Método exclusivo que integra Neurociência, Epigenética e Traços de Caráter de Reich. 25 anos de pesquisa aprofundada.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#2563eb">
+    
+    <title>Descubra Sua Personalidade pelos Pés | Irmo Zuccato Neto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Define a fonte Inter para o corpo */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            /* Fundo temático Black Friday */
-            background: #1a1a1a;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px 60px;
-            color: white;
-        }
-
-        .logo {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 20px;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            /* Ajuste para logo em fundo escuro */
-            background: white;
-            border-radius: 50%;
-            padding: 10px;
-            box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1);
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .autor {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 15px;
-            opacity: 0.95;
-            letter-spacing: 1px;
-            color: #f0c400; /* Destaque amarelo */
-        }
-
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        /* NOVO: Header de Black Friday */
-        .bf-header {
-            font-size: 2.2em;
-            font-weight: bold;
-            color: #f0c400; /* Amarelo Black Friday */
-            background-color: #333;
-            padding: 10px 20px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 30px;
-            border: 2px solid #f0c400;
-            animation: pulse-black 2s infinite;
-        }
-
-        @keyframes pulse-black {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(240, 196, 0, 0.7);
+                /* Estilos para animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
             }
-            70% {
-                transform: scale(1.05);
-                box-shadow: 0 0 10px 20px rgba(240, 196, 0, 0);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(240, 196, 0, 0);
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-
-
-        .secao {
-            margin: 40px 0;
+                .fade-in {
+            animation: fadeIn 0.6s ease-in-out;
         }
-
-        .secao-titulo {
-            color: white;
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .produtos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-        }
-
-        .produto-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                /* Estilo para simular o espaço do anúncio (para visualização antes da aprovação) */
+        .ads-placeholder-manual {
+            min-height: 250px;
             display: flex;
-            flex-direction: column;
-            position: relative;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #059669;
+            color: #047857;
+            background-color: #f0fdf4;
+            border-radius: 0.75rem;
+            width: 100%;
+            max-width: 728px; 
+            margin: 2.5rem auto;
+            font-size: 0.875rem;
         }
-
-        .produto-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .tipo-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.85em;
-        }
-
-        .badge-curso {
-            /* Cor original mantida */
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                /* Estilo para o banner de consentimento */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.95);
             color: white;
+            padding: 1.5rem;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .badge-ebook {
-             /* Cor original mantida */
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
+                .cookie-banner.show {
+            display: block;
         }
-
-        .produto-card h2 {
-            color: #333; /* Cor escura para contrastar com branco */
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            margin-top: 25px;
-            min-height: 60px;
+                .cookie-banner.hidden {
+            display: none;
         }
-
-        .produto-card p {
-            color: #666;
-            margin-bottom: 25px;
-            flex-grow: 1;
+                /* Estilo para botões de CTA */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        /* Botão Padrão (será sobrescrito) */
-        .btn-comprar {
-            display: inline-block;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            text-align: center;
+                .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+                .cta-button:active {
+            transform: translateY(0);
+        }
+                /* Estilo para a seção hero */
+        .hero-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+                /* Estilo para cards de testemunhos (mantido para estrutura futura) */
+        .testimonial-card {
+            background-color: #f9fafb;
+            border-left: 4px solid #2563eb;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        /* NOVO: Botão Black Friday */
-        .btn-blackfriday {
-            background: linear-gradient(135deg, #333 0%, #000 100%);
-            box-shadow: 0 4px 15px rgba(240, 196, 0, 0.4);
-            border: 2px solid #f0c400;
+                .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-
-        .btn-blackfriday:hover {
+                /* Estilo para FAQ (mantido para estrutura futura) */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+                .faq-item:last-child {
+            border-bottom: none;
+        }
+                .faq-toggle {
+            cursor: pointer;
+            user-select: none;
+        }
+                .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+                .faq-content.open {
+            max-height: 500px;
+        }
+        /* Estilo para quebrar o título em duas linhas em telas pequenas */
+        .title-break span {
+            display: block;
+        }
+        /* NOVO ESTILO: Bloco de Vídeo Estático (Solução para Erro 153) */
+        .video-box {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .video-thumbnail-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .video-box:hover .video-thumbnail-image {
             transform: scale(1.05);
-            background: #f0c400;
-            color: #000;
-            box-shadow: 0 6px 20px rgba(240, 196, 0, 0.6);
-            border-color: #000;
         }
-
-        .destaque {
-            border: 3px solid #f0c400; /* Amarelo */
-        }
-
-        .destaque::after {
-            content: "⭐ MAIS VENDIDO"; /* Alterado */
+        .play-overlay {
             position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #f0c400;
-            color: #000;
-            padding: 5px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
         }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: white;
-            opacity: 0.9;
+        .play-overlay:hover {
+            background-color: rgba(255, 0, 0, 0.6);
         }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
+        .play-icon-svg {
+            fill: white;
+            width: 70px;
+            height: 70px;
+        }
+        /* NOVO ESTILO: Para o logo no título */
+        .hero-title-container {
+            display: flex;
+            align-items: center; /* Alinha o logo e o texto verticalmente */
+            justify-content: center; /* Centraliza o conjunto de logo e texto */
+            flex-wrap: wrap; /* Permite que o logo e o título quebrem a linha em telas pequenas */
+            gap: 1rem; /* Espaçamento entre o logo e o texto */
+        }
+        .hero-logo {
+            max-height: 80px; /* Tamanho do logo */
+            width: auto;
+            border-radius: 50%; /* Opcional: para logos circulares */
+            object-fit: contain; /* Garante que a imagem não seja cortada */
+        }
+        /* Ajustes para telas menores para o logo e título */
+        @media (max-width: 640px) { /* sm breakpoint no Tailwind */
+            .hero-logo {
+                max-height: 60px; /* Menor em telas pequenas */
             }
-            .bf-header {
-                font-size: 1.5em;
-            }
-            .produtos {
-                grid-template-columns: 1fr;
+            .hero-title-container {
+                flex-direction: column; /* Empilha o logo e o texto em telas pequenas */
+                gap: 0.5rem;
             }
         }
     </style>
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2957847231347233"
+        crossorigin="anonymous"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6256662778"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // ID INSERIDO: G-6256662778
+        gtag('config', 'G-6256662778'); 
+    </script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/irmoneto/Analisador-Personalidade-Pelos-P-s/main/IMAGENS%20APP/LOGO.jpg" alt="IZN - Análise dos Pés BNV">
-            </div>
-            
-            <!-- Título da Black Friday -->
-            <h2 class="bf-header">🔥 OFERTA BLACK FRIDAY 🔥</h2>
-            
-            <p class="autor">IRMO ZUCCATO NETO</p>
-            <h1>Cursos e E-books com 50% de Desconto</h1>
-            <p>Aproveite o cupom <strong>BLACKFRIDAY</strong>! Válido por tempo limitado.</p>
-        </header>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center text-gray-800">
 
-        <!-- CURSO -->
-        <div class="secao">
-            <h2 class="secao-titulo">📚 Curso Completo</h2>
-            <div class="produtos">
-                <div class="produto-card destaque">
-                    <span class="tipo-badge badge-curso">CURSO</span>
-                    <h2>MÓDULO BÁSICO – ANÁLISE DA PERSONALIDADE PELOS PÉS</h2>
-                    <p>Curso completo com toda a base necessária para começar a praticar a análise da personalidade pelos pés de forma profissional. Aprenda através de vídeo-aulas e material didático completo.</p>
-                    <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/2172958?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
+    <section class="hero-section w-full py-16 px-6 text-center text-white fade-in">
+        <div class="max-w-4xl mx-auto">
+            <div class="hero-title-container mb-4">
+                <img src="https://raw.githubusercontent.com/irmoneto/Analisador-Personalidade-Pes/main/IMAGENS%20APP/LOGO.jpg" alt="Logo Irmo Zuccato Neto" class="hero-logo">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight title-break">
+                    Irmo Zuccato Neto
+                    <span class="block text-2xl sm:text-3xl font-light mt-1">
+                        Análise de Personalidade pelos Pés
+                    </span>
+                </h1>
             </div>
+            <p class="text-lg sm:text-xl mb-8 text-blue-100">
+                A Análise pelos Pés que integra Neurociência, Epigenética e Traços de Caráter de Reich
+            </p>
+            <a href="#analisador"
+                class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg cta-button hover:bg-blue-50">
+                Comece Sua Análise Agora
+            </a>
+        </div>
+    </section>
+
+    <div class="max-w-4xl w-full p-8 sm:p-10 bg-white shadow-xl rounded-2xl text-center my-8 mx-6 fade-in">
+        <div class="text-left mb-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+                Irmo Zuccato Neto
+            </h2>
+            <p class="text-lg text-blue-600 font-semibold">
+                Especialista em Análise de Personalidade pelos Pés
+            </p>
+            <p class="text-gray-600 mt-2 leading-relaxed">
+                Método exclusivo aprimorado em <strong>25 anos</strong> de pesquisa, integrando Epigenética, Neurociência e os Traços de Caráter de Wilhelm Reich para oferecer um mapa completo e profundo da personalidade humana.
+            </p>
         </div>
 
-        <!-- E-BOOKS -->
-        <div class="secao">
-            <h2 class="secao-titulo">📖 E-books Exclusivos</h2>
-            <div class="produtos">
-                <div class="produto-card">
-                    <span class="tipo-badge badge-ebook">E-BOOK</span>
-                    <h2>B-A-BA DA ANÁLISE DA PERSONALIDADE PELOS PÉS</h2>
-                    <p>Aprenda os fundamentos essenciais da análise da personalidade através dos pés. Ideal para iniciantes que desejam descobrir esta técnica fascinante.</p>
-                     <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/1878274?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
-
-                <div class="produto-card">
-                    <span class="tipo-badge badge-ebook">E-BOOK</span>
-                    <h2>OS ALIMENTOS E OS PÉS</h2>
-                    <p>Descubra a conexão surpreendente entre alimentação e as características reveladas pelos pés. Uma abordagem única e holística.</p>
-                     <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/1975089?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
-
-                <div class="produto-card">
-                    <span class="tipo-badge badge-ebook">E-BOOK</span>
-                    <h2>O PODER DO PROCESSO CATÁRTICO</h2>
-                    <p>Compreenda como o processo catártico pode transformar sua prática terapêutica e aprofundar suas sessões.</p>
-                     <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/2042456?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
-
-                <div class="produto-card">
-                    <span class="tipo-badge badge-ebook">E-BOOK</span>
-                    <h2>O PODER DA CUMPLICIDADE DENTRO DAS TERAPIAS CORPORAIS</h2>
-                    <p>Desenvolva uma conexão profunda com seus clientes e potencialize os resultados das suas terapias corporais.</p>
-                     <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/6W4VNYOA0Z?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
-
-                <div class="produto-card">
-                    <span class="tipo-badge badge-ebook">E-BOOK</span>
-                    <h2>OS PÉS DA INOCÊNCIA AO EROTISMO</h2>
-                    <p>Explore as diferentes dimensões da expressão humana através da análise dos pés, desde a inocência até aspectos mais profundos da personalidade.</p>
-                     <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/KW8KJ28K01?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
-
-                <div class="produto-card">
-                    <span class="tipo-badge badge-ebook">E-BOOK</span>
-                    <h2>O CÓDIGO KALI</h2>
-                    <p>Desvende os mistérios deste método exclusivo e transforme sua compreensão sobre análise corporal e personalidade.</p>
-                     <!-- Link e Botão Atualizados -->
-                    <a href="https://sun.eduzz.com/7WXQJYQ29A?cupom=BLACKFRIDAY" class="btn-comprar btn-blackfriday" target="_blank">
-                        PEGAR OFERTA 50% OFF
-                    </a>
-                </div>
-            </div>
+        <div class="my-8 ads-placeholder-manual mx-auto">
+            <p class="font-bold text-base text-center">ÁREA RESERVADA PARA ANÚNCIOS DO ADSENSE<br><span class="text-sm">Anúncios automáticos ou blocos de anúncios responsivos</span></p>
         </div>
 
-        <footer>
-            <p>O desconto de 50% (cupom: <strong>BLACKFRIDAY</strong>) será aplicado na página de pagamento.</p>
-            <p>Todos os produtos são oferecidos através da plataforma Eduzz</p>
-            <p>Pagamento 100% seguro • Acesso imediato após aprovação</p>
-        </footer>
+        <hr class="my-10 border-t border-gray-200">
+
+        <section class="text-left mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 mb-6 border-b-2 border-blue-600 pb-3" id="metodologia">Fundamentos e Metodologia da Análise</h2>
+
+            <p class="mb-6 text-gray-700 leading-relaxed text-justify">
+                A Análise de Personalidade pelos Pés é uma metodologia única e profunda, fruto de mais de duas décadas e meia de pesquisa e aprimoramento contínuo. Nosso método transcende abordagens simplistas, focando na integração de conhecimentos empíricos e científicos para oferecer um mapa completo da personalidade humana. Cada detalhe dos pés revela padrões comportamentais, traços emocionais e potenciais de desenvolvimento pessoal.
+            </p>
+            <h3 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Pilares Integrados e Científicos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                    <h4 class="font-bold text-blue-700 mb-2">Psicologia Corporal de Reich</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Aplicação dos conceitos de Wilhelm Reich sobre a "couraça caracterológica", explorando como as defesas emocionais se manifestam na estrutura física e identificando os Traços de Caráter (Oral, Masoquista, etc.) refletidos nos pés.
+                    </p>
+                </div>
+                <div class="p-6 bg-green-50 rounded-lg border-l-4 border-green-600">
+                    <h4 class="font-bold text-green-700 mb-2">Epigenética e Caráter</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Estudo de como fatores ambientais e traumas emocionais na infância ativam ou silenciam a expressão genética, moldando o corpo e a personalidade de forma única e dinâmica.
+                    </p>
+                </div>
+                <div class="p-6 bg-purple-50 rounded-lg border-l-4 border-purple-600">
+                    <h4 class="font-bold text-purple-700 mb-2">Neurociência Aplicada</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Integração da Teoria do Cérebro Trino para um entendimento profundo das camadas cerebrais e sua influência direta no comportamento e reações emocionais.
+                    </p>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed text-justify">
+                Essa síntese multidisciplinar fornece uma ferramenta robusta para o autoconhecimento, essencial para coaches, terapeutas, profissionais de desenvolvimento humano e para qualquer pessoa em busca de compreensão profunda sobre seus padrões de vida e potencial de transformação pessoal.
+            </p>
+
+            <div class="mt-8 p-4 bg-red-50 border-l-4 border-red-500 text-red-800 rounded">
+                <p class="font-bold text-lg mb-2">⚠️ Aviso de Isenção de Responsabilidade (Disclaimer)</p>
+                <p class="text-sm leading-relaxed">
+                    Este método, os aplicativos e infoprodutos têm fins estritamente informativos, de autoconhecimento e desenvolvimento pessoal. Eles <strong>NÃO</strong> substituem, em nenhuma circunstância, consulta, diagnóstico ou tratamento médico, psicológico ou psiquiátrico profissional. Para questões de saúde mental ou física, consulte sempre um profissional qualificado.
+                </p>
+            </div>
+        </section>
+
+        <hr class="my-10 border-t border-gray-200">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 mb-8 border-b-2 border-blue-600 pb-3">Conteúdo em Vídeo: Destaques do Canal</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed text-center">
+                Confira nossos vídeos mais relevantes sobre personalidade, corpo e desenvolvimento. Clique na miniatura para assistir no YouTube.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <a href="https://www.youtube.com/watch?v=qj03Dd958jc" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="video-box">
+                        <img class="video-thumbnail-image" src="https://img.youtube.com/vi/qj03Dd958jc/mqdefault.jpg" alt="Miniatura do Vídeo Reintegração Mente-Corpo">
+                        <div class="play-overlay">
+                            <svg class="play-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2-4h8v2H8v-2zm-2-4h12V9H6v2zm-2-4V5h16v2H4z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-4 text-left">
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Reintegração Mente-Corpo</h3>
+                        <p class="text-sm text-gray-600">A importância de conectar o físico e o mental.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=NKr2VBzjQlY" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="video-box">
+                        <img class="video-thumbnail-image" src="https://img.youtube.com/vi/NKr2VBzjQlY/mqdefault.jpg" alt="Miniatura do Vídeo Pés e Emoções">
+                        <div class="play-overlay">
+                            <svg class="play-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2-4h8v2H8v-2zm-2-4h12V9H6v2zm-2-4V5h16v2H4z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-4 text-left">
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Pés e Emoções</h3>
+                        <p class="text-sm text-gray-600">A relação dos dedos com o sentimento de vergonha.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=IXOZUVQm4VU" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <div class="video-box">
+                        <img class="video-thumbnail-image" src="https://img.youtube.com/vi/IXOZUVQm4VU/mqdefault.jpg" alt="Miniatura do E-book O CÓDIGO KALI">
+                        <div class="play-overlay">
+                            <svg class="play-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2-4h8v2H8v-2zm-2-4h12V9H6v2zm-2-4V5h16v2H4z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-4 text-left">
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Lançamento Exclusivo</h3>
+                        <p class="text-sm text-gray-600">Conheça o novo E-book: O CÓDIGO KALI.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="http://www.youtube.com/user/irmoneto" target="_blank"
+                    class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    ▶️ Inscreva-se e Veja Mais Vídeos no Canal
+                </a>
+            </div>
+        </section>
+
+        <hr class="my-10 border-t border-gray-200">
+
+        <section class="mb-8" id="recursos">
+            <h2 class="text-3xl font-bold text-blue-600 mb-8 border-b-2 border-blue-600 pb-3">Acesse Nossas Ferramentas e Cursos</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed text-center">
+                Escolha a forma que melhor se adequa ao seu objetivo de desenvolvimento pessoal e autoconhecimento.
+            </p>
+            <div class="flex flex-col space-y-4 items-center">
+                
+                <!-- NOVO BOTÃO BLACK FRIDAY -->
+                <a href="blackfriday.html"
+                    class="w-full max-w-lg bg-gray-900 hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300 animate-pulse">
+                    🔥 OFERTA BLACK FRIDAY (50% OFF) 🔥
+                </a>
+                <!-- FIM DO NOVO BOTÃO -->
+
+                <a href="https://irmoneto.github.io/Analisador-Personalidade-Pes/" target="_blank" id="analisador"
+                    class="w-full max-w-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    🔍 Acesse o Analisador da Personalidade pelos Pés
+                </a>
+                <a href="https://irmoneto.github.io/INFOPRODUTOS-BY-IRMONETO/" target="_blank"
+                    class="w-full max-w-lg bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    📚 Infoprodutos e Cursos (Aprofundamento)
+                </a>
+                <a href="https://irmoneto.github.io/blog/" target="_blank"
+                    class="w-full max-w-lg bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg cta-button transition duration-300">
+                    ✍️ Leia Nossos Artigos no Blog
+                </a>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO BLACK FRIDAY -->
+        <hr class="my-10 border-t border-gray-200">
+        <!-- Fim da Seção BLACK FRIDAY -->
+
+
+        <div class="my-8 ads-placeholder-manual mx-auto">
+            <p class="font-bold text-base text-center">ÁREA RESERVADA PARA ANÚNCIOS DO ADSENSE<br><span class="text-sm">Anúncios automáticos ou blocos de anúncios responsivos</span></p>
+        </div>
     </div>
+
+    <footer class="w-full max-w-4xl p-6 mt-8 text-sm text-gray-600 border-t border-gray-300 bg-white shadow-xl rounded-2xl text-center mx-6 mb-8">
+        <div class="mb-4">
+            <a href="http://www.youtube.com/user/irmoneto" target="_blank" class="text-red-600 hover:text-red-800 font-bold transition duration-150 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                Visite nosso Canal no YouTube
+            </a>
+        </div>
+        <p class="mb-4">© 2025 Irmo Zuccato Neto. Todos os direitos reservados.</p>
+        <nav class="flex flex-wrap justify-center space-x-4 text-xs sm:text-sm font-medium">
+            <a href="politica-privacidade.html" class="hover:text-blue-700 transition duration-150">Política de Privacidade</a>
+            <span class="text-gray-400">|</span>
+            <a href="termos-de-uso.html" class="hover:text-blue-700 transition duration-150">Termos de Uso</a>
+            <span class="text-gray-400">|</span>
+            <a href="contato.html" class="hover:text-blue-700 transition duration-150">Contato</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="hover:text-blue-700 transition duration-150" onclick="showCookieBanner(); return false;">Configurar Cookies</a>
+        </nav>
+    </footer>
+
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex-1">
+                <p class="text-sm sm:text-base">
+                    🍪 Utilizamos cookies para melhorar sua experiência e cumprir com as regulamentações de privacidade (LGPD/GDPR). Ao continuar navegando, você concorda com nossa <a href="politica-privacidade.html" class="underline hover:text-blue-300">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="flex gap-3 flex-shrink-0">
+                <button onclick="acceptCookies()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">
+                    Aceitar
+                </button>
+                <button onclick="rejectCookies()" class="bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded transition">
+                    Rejeitar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para alternar FAQ
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('span');
+
+            content.classList.toggle('open');
+            icon.textContent = content.classList.contains('open') ? '−' : '+';
+        }
+
+        // Função para mostrar banner de cookies
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.add('show');
+            banner.classList.remove('hidden');
+        }
+
+        // Função para aceitar cookies
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.add('hidden');
+            document.getElementById('cookieBanner').classList.remove('show');
+
+            // Aqui você pode adicionar lógica para habilitar rastreamento completo
+            console.log('Cookies aceitos');
+        }
+
+        // Função para rejeitar cookies
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.add('hidden');
+            document.getElementById('cookieBanner').classList.remove('show');
+
+            // Aqui você pode adicionar lógica para desabilitar rastreamento não-essencial
+            console.log('Cookies rejeitados');
+        }
+
+        // Verificar consentimento de cookies ao carregar a página
+        window.addEventListener('load', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                // Mostrar banner se não houver consentimento prévio
+                setTimeout(showCookieBanner, 1000);
+            }
+        });
+
+        // Inicializar anúncios automáticos do AdSense (se configurado)
+        window.addEventListener('load', function() {
+            if (window.adsbygoogle) {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {
+                    console.log('AdSense ainda não está pronto ou não foi aprovado');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
